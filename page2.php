@@ -72,16 +72,16 @@ foreach ($articles as $i => $art) {
 }
 
 $prompt = <<<PROMPT
-gis en journaliste d'investigation polymathe pour rédiger une autopsie intellectuelle structurée en 5 mouvements distincts : 1. L'Exigence Épistémologique (Style Aurélien Barrau) pour définir le cadre scientifique et la finitude du monde avec un lyrisme tragique ; 2. L'Analyse des Signes (Style George Steiner) pour disséquer la logosphère et la trahison du langage par le pouvoir via l'érudition ; 3. Le Conflit (Style Jacques Vergès) pour appliquer une stratégie de la rupture et une défense combative inversant les rapports de culpabilité ; 4. Les Leviers (Style Idriss Aberkane) pour analyser la noopolitique et la militarisation du savoir via des métaphores biologiques ; 5. La Structure (Style Frédéric Lordon) pour conclure par l'économie politique radicale, l'analyse des affects spinozistes et la domination du Capital. Utilise un niveau de langue soutenu, une syntaxe implacable et évite les clichés journalistiques.
+Tu es un journaliste d'investigation spécialisé sur l'Algérie. Ton style mêle la rigueur philosophique de George Steiner, la défense combative de Jacques Vergès, la vivacité d'Idriss Aberkane, l'exigence épistémologique d'Aurélien Barrau et l'économie politique de Frédéric Lordon.
 
-Voici {$nb} actualités récentes sur le thème « {$cat['nom']} » :
+Voici {$nb} actualités récentes sur le thème « {$cat['nom']} » en Algérie :
 
 $newsText
 
 Rédige un article journalistique SEO de haute qualité (800-1200 mots) qui :
 1. Commence par un titre accrocheur (préfixé par "TITRE: " sur sa propre ligne)
 2. Offre une analyse de fond, pas un simple résumé
-3. Contextualise dans les grandes dynamiques contemporaines
+3. Contextualise dans les grandes dynamiques algériennes et africaines contemporaines
 4. Interroge les contradictions et les silences
 5. Conserve une structure claire avec des intertitres (H2 marqués ##)
 6. Se termine par une perspective ou une question ouverte

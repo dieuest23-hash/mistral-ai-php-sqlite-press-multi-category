@@ -9,33 +9,40 @@ require_once __DIR__ . '/api_mistral.php';
 
 // Les 100 catégories Google News par défaut
 const DEFAULT_CATEGORIES = [
-    "Politique France","Politique internationale","Économie mondiale","Finance marchés",
-    "Technologie IA","Cybersécurité","Spatial astronomie","Sciences recherche",
-    "Santé médecine","Environnement climat","Énergie transition","Agriculture alimentation",
-    "Transports mobilité","Urbanisme architecture","Éducation université","Culture arts",
-    "Cinéma séries","Musique","Littérature livres","Jeux vidéo","Sport football",
-    "Sport tennis","Sport cyclisme","Sport rugby","Sport jeux olympiques",
-    "Géopolitique Moyen-Orient","Géopolitique Russie Ukraine","Géopolitique Chine",
-    "Géopolitique Afrique","Géopolitique Amérique latine","Immigration sociologie",
-    "Droits humains","Justice droit","Défense armée","Terrorisme sécurité",
-    "Diplomatie relations internationales","Réseaux sociaux numérique","Startups innovation",
-    "Automobile électrique","Aéronautique aviation","Médias presse","Philosophie société",
-    "Religions spiritualité","Histoire mémoire","Archéologie patrimoine","Gastronomie cuisine",
-    "Mode luxe","Tourisme voyages","Immobilier logement","Emploi travail",
-    "Entrepreneuriat PME","Commerce distribution","Luxe joaillerie","Crypto blockchain",
-    "Intelligence artificielle générative","Robotique automatisation","Biotechnologies",
-    "Médecine génomique","Psychiatrie santé mentale","Addiction dépendances",
-    "Vieillissement démographie","Natalité famille","Pauvreté inégalités","Mondialisation",
-    "Protectionnisme souveraineté","BCE FED politique monétaire","Dette publique","Retraites",
-    "Fiscalité impôts","Syndicalisme travail","Grèves mouvements sociaux","Féminisme genre",
-    "LGBTQ+ droits","Racisme discriminations","Antisémitisme","Islamophobie","Laïcité",
-    "Désinformation fake news","Surveillance vie privée","Liberté de la presse",
-    "Partis politiques élections","Extrême droite montée","Gauche radicale","Écologie politique",
-    "Nucléaire énergie","Pétrole gaz","Eau ressources naturelles","Biodiversité extinction",
-    "Océans pollution","Météo événements extrêmes","Séismes catastrophes naturelles",
-    "Pandémies épidémies","Vaccins santé publique","Hôpital système de soins",
-    "Drogues politiques","Prison justice pénale","Corruption scandales","Diplomatie UE",
-    "Brexit conséquences","Balkans Europe de l'Est","Asie du Sud-Est","Inde émergence",
+    "Politique Algérie","Gouvernement algérien","Élections Algérie","Partis politiques Algérie",
+    "Économie Algérie","Hydrocarbures Algérie","Sonatrach","Diversification économique Algérie",
+    "Startups Algérie","Innovation Algérie","Technologie Algérie","Numérique Algérie",
+    "Jeunesse Algérie","Emploi jeunes Algérie","Entrepreneuriat Algérie","Formation professionnelle Algérie",
+    "Agriculture Algérie","Sécurité alimentaire Algérie","Céréales Algérie","Irrigation Algérie",
+    "Industrie Algérie","Made in Algeria","PME Algérie","Investissement étranger Algérie",
+    "Énergie renouvelable Algérie","Solaire Algérie","Transition énergétique Algérie",
+    "Infrastructure Algérie","Travaux publics Algérie","Transport Algérie","Métro Alger","Tramway Algérie",
+    "Santé Algérie","Hôpitaux Algérie","Pharmacie Algérie","Recherche médicale Algérie",
+    "Éducation Algérie","Universités algériennes","Recherche scientifique Algérie","Innovation pédagogique Algérie",
+    "Culture algérienne","Arts Algérie","Cinéma algérien","Musique algérienne","Littérature algérienne",
+    "Sport Algérie","Football algérien","Équipe nationale Algérie","Athlètes algériens",
+    "Diaspora algérienne","Algériens de l'étranger","Communauté algérienne France","Communauté algérienne Canada",
+    "Géopolitique Maghreb","Relations Algérie Maroc","Relations Algérie Tunisie","Union du Maghreb arabe",
+    "Relations Algérie France","Diplomatie algérienne","Politique étrangère Algérie",
+    "Afrique relations","Coopération Sud-Sud","Algérie Afrique subsaharienne","CEDEAO Algérie",
+    "Monde arabe","Relations Algérie Moyen-Orient","OPEP Algérie","Gaz naturel Algérie",
+    "Sécurité Algérie","Défense nationale Algérie","Armée algérienne","Lutte antiterroriste Algérie",
+    "Justice Algérie","Réforme judiciaire Algérie","Droits humains Algérie","Société civile Algérie",
+    "Environnement Algérie","Changement climatique Algérie","Désertification Algérie","Eau Algérie",
+    "Femmes Algérie","Droits des femmes Algérie","Égalité genre Algérie","Leadership féminin Algérie",
+    "Patrimoine algérien","Histoire Algérie","Mémoire collective Algérie","Archéologie Algérie",
+    "Tourisme Algérie","Sites historiques Algérie","Hôtellerie Algérie","Destination Algérie",
+    "Immobilier Algérie","Logement Algérie","Urbanisme Algérie","Villes algériennes",
+    "Commerce Algérie","Exportations Algérie","Importations Algérie","Balance commerciale Algérie",
+    "Banque Algérie","Finance islamique Algérie","Bourse Alger","Investissement Algérie",
+    "Télécommunications Algérie","Internet Algérie","5G Algérie","Transformation digitale Algérie",
+    "Mode algérienne","Design algérien","Artisanat algérien","Traditions algériennes",
+    "Gastronomie algérienne","Cuisine traditionnelle Algérie","Produits du terroir Algérie",
+    "Médias Algérie","Presse algérienne","Journalisme Algérie","Liberté de presse Algérie",
+    "Associations Algérie","ONG Algérie","Bénévolat Algérie","Action sociale Algérie",
+    "Retraites Algérie","Protection sociale Algérie","Solidarité nationale Algérie",
+    "Recherche spatiale Algérie","Satellite algérien","Sciences spatiales Algérie",
+    "Biotechnologies Algérie","Innovation santé Algérie","Génétique Algérie",
 ];
 
 // ── Fonctions utilitaires ────────────────────────────────────────────────────
@@ -95,7 +102,7 @@ if ($subCount < 3) {
     $result = mistralCall([
         [
             'role'    => 'user',
-            'content' => "Génère exactement 8 sous-catégories journalistiques pertinentes pour la catégorie « {$categorie['nom']} ». Réponds UNIQUEMENT avec un tableau JSON de strings, exemple: [\"sous-cat 1\",\"sous-cat 2\",...]. Rien d'autre."
+            'content' => "Génère exactement 8 sous-catégories journalistiques pertinentes pour la catégorie « {$categorie['nom']} » en Algérie. Réponds UNIQUEMENT avec un tableau JSON de strings, exemple: [\"sous-cat 1\",\"sous-cat 2\",...]. Rien d'autre."
         ]
     ], 400, 0.6);
 
@@ -144,7 +151,7 @@ if ($queryCount < 5) {
     $result = mistralCall([
         [
             'role'    => 'user',
-            'content' => "Génère 20 requêtes de recherche Google News en français pour la sous-catégorie journalistique « {$sousCat['nom']} » (catégorie parente: « {$categorie['nom']} »). Ces requêtes doivent être variées, précises, actuelles. Réponds UNIQUEMENT avec un tableau JSON de strings. Exemple: [\"requête 1\",\"requête 2\",...]. Rien d'autre."
+            'content' => "Génère 20 requêtes de recherche Google News en français pour la sous-catégorie journalistique « {$sousCat['nom']} » (catégorie parente: « {$categorie['nom']} ») en Algérie. Ces requêtes doivent être variées, précises, actuelles et centrées sur le contexte algérien. Réponds UNIQUEMENT avec un tableau JSON de strings. Exemple: [\"requête 1\",\"requête 2\",...]. Rien d'autre."
         ]
     ], 600, 0.7);
 

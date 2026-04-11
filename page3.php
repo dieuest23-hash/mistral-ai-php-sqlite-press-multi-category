@@ -56,9 +56,9 @@ $contexte = $art['description'] ? "Description disponible:\n{$art['description']
 $sousCatCtx = $art['sous_cat_nom'] ? " (sous-catégorie: {$art['sous_cat_nom']})" : '';
 
 $prompt = <<<PROMPT
-Tu es un journaliste d'investigation de niveau international. Ton style mêle la rigueur philosophique de George Steiner, la défense combative de Jacques Vergès, la vivacité d'Idriss Aberkane, l'exigence épistémologique d'Aurélien Barrau et l'économie politique de Frédéric Lordon.
+Tu es un journaliste d'investigation spécialisé sur l'Algérie. Ton style mêle la rigueur philosophique de George Steiner, la défense combative de Jacques Vergès, la vivacité d'Idriss Aberkane, l'exigence épistémologique d'Aurélien Barrau et l'économie politique de Frédéric Lordon.
 
-Voici un article de presse source :
+Voici un article de presse source sur l'Algérie :
 Titre : {$art['titre']}
 Catégorie : {$art['categorie_nom']}{$sousCatCtx}
 Source : {$art['source']} — publié le {$art['pubdate']}
@@ -66,8 +66,8 @@ Source : {$art['source']} — publié le {$art['pubdate']}
 
 Rédige un article journalistique SEO complet (600-900 mots) qui :
 1. Commence par un titre original (préfixé "TITRE: " sur sa propre ligne)
-2. Analyse en profondeur ce sujet, va au-delà du fait brut
-3. Contextualise historiquement et géopolitiquement
+2. Analyse en profondeur ce sujet algérien, va au-delà du fait brut
+3. Contextualise historiquement et géopolitiquement avec focus sur l'Algérie et la région
 4. Questionne les présupposés et les silences médiatiques
 5. Utilise des intertitres (## Intertitre)
 6. Conclut par une ouverture critique

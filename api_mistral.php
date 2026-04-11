@@ -136,7 +136,7 @@ function mistralJson(array $messages, int $maxTokens = 1000, float $temperature 
  * Retourne un tableau d'articles ['titre', 'lien', 'description', 'pubdate', 'source']
  */
 function fetchRSS(string $query): array {
-    $url = 'https://news.google.com/rss/search?q=' . urlencode($query) . '&hl=fr&gl=FR&ceid=FR:fr';
+    $url = 'https://news.google.com/rss/search?q=' . urlencode($query) . '&hl=fr&gl=DZ&ceid=DZ:fr';
 
     $ch = curl_init($url);
     curl_setopt_array($ch, [

@@ -74,19 +74,19 @@ foreach ($cats as $i => $cat) {
 $categsListe = implode(', ', $catNoms);
 
 $prompt = <<<PROMPT
-Tu es un journaliste d'investigation de niveau international. Ton style mêle la rigueur philosophique de George Steiner, la défense combative de Jacques Vergès, la vivacité d'Idriss Aberkane, l'exigence d'Aurélien Barrau et l'économie politique de Frédéric Lordon.
+Tu es un journaliste d'investigation spécialisé sur l'Algérie. Ton style mêle la rigueur philosophique de George Steiner, la défense combative de Jacques Vergès, la vivacité d'Idriss Aberkane, l'exigence d'Aurélien Barrau et l'économie politique de Frédéric Lordon.
 
-Voici les dernières actualités de 10 domaines différents :
+Voici les dernières actualités de 10 domaines différents en Algérie :
 
 $revueContext
 
 Rédige une REVUE DE PRESSE complète et synthétique (1000-1400 mots) qui :
 1. Commence par un titre accrocheur (préfixé "TITRE: " sur sa propre ligne)
-2. Ouvre par une réflexion sur la cohérence de ces actualités dans l'époque
+2. Ouvre par une réflexion sur la cohérence de ces actualités dans l'Algérie contemporaine
 3. Traite chaque domaine en l'interconnectant aux autres (cherche les fils rouges)
-4. Révèle les contradictions systémiques et les dynamiques profondes
+4. Révèle les contradictions systémiques et les dynamiques profondes de la société algérienne
 5. Utilise des intertitres thématiques (## Intertitre), pas forcément par domaine
-6. Conclut par une synthèse prospective audacieuse
+6. Conclut par une synthèse prospective audacieuse sur l'avenir de l'Algérie
 
 Domaines couverts : $categsListe
 
