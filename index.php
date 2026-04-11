@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>web-4.art | Revue de Presse IA</title>
+<title>web-4.art | Revue de Presse Algérie - IA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
@@ -587,11 +587,11 @@ body {
     <div class="masthead-inner">
         <div>
             <div class="masthead-meta" id="mastDate"></div>
-            <div class="masthead-meta" style="margin-top:0.2rem;">Boucle perpétuelle • IA Mistral Large</div>
+            <div class="masthead-meta" style="margin-top:0.2rem;">Algérie • Boucle perpétuelle • IA Mistral Large</div>
         </div>
         <div>
             <div class="masthead-title">web-4.art</div>
-            <div class="masthead-subtitle">Revue de presse algorithmique • Analyse critique permanente</div>
+            <div class="masthead-subtitle">Revue de presse algérienne • Analyse critique permanente</div>
         </div>
         <div class="masthead-status">
             <div style="display:flex;align-items:center;gap:0.5rem;">
