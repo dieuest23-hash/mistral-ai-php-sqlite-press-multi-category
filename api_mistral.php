@@ -2,7 +2,8 @@
 // api_mistral.php — Mistral API helper
 // Gestion: timeout long, retry, JSON safe, streaming-ready
 
-define('MISTRAL_API_KEY', getenv('MISTRAL_API_KEY') ?: ' your mistral api key ');
+define('MISTRAL_API_KEY', getenv('MISTRAL_API_KEY') ?: ' pwl2CFGont8ohtanaGCHGA8nAHd3WpFo
+ ');
 define('MISTRAL_URL',     'https://api.mistral.ai/v1/chat/completions');
 define('MISTRAL_MODEL',   'mistral-large-2411');
 
